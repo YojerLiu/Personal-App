@@ -1,4 +1,4 @@
-package com.example.cuckoo;
+package com.example.Cuckoo;
 
 import android.content.Context;
 
