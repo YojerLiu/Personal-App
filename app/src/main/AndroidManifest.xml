@@ -10,7 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cuckoo">
         <activity
-            android:name="com.example.Cuckoo.MainActivity"
+            android:name=".DisplayMessageActivity"
+            android:parentActivityName=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
