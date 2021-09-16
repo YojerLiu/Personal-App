@@ -20,14 +20,15 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="129dp"
+        android:layout_height="65dp"
         android:layout_marginTop="56dp"
-        android:layout_marginBottom="712dp"
+        android:layout_marginBottom="56dp"
         android:onClick="enterChatInterface"
         android:text="@string/button_chat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.181" />
 </androidx.constraintlayout.widget.ConstraintLayout>
