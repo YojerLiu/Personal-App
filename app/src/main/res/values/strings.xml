@@ -2,4 +2,7 @@
     <string name="app_name">Cuckoo</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
+    <string name="user_default_name">Anonymous</string>
+    <string name="default_description">I don\'t have any description yet :)</string>
+    <string name="button_chat">Chat</string>
 </resources>
