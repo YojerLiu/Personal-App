@@ -15,8 +15,8 @@ public class MainActivity extends AppCompatActivity {
     // Called when the activity is first created.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        super.onCreate(savedInstanceState);       // Call the super class onCreate to complete the creation of activity
+        setContentView(R.layout.activity_main);   // Set the user interface layout for this activity
         Log.d(msg, "The onCreate() event is running");
     }
 
