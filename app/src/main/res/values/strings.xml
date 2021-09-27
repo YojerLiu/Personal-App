@@ -5,4 +5,7 @@
     <string name="user_default_name">Anonymous</string>
     <string name="default_description">I don\'t have any description yet :)</string>
     <string name="button_chat">Chat</string>
+    <string name="register_button">Register</string>
+    <string name="login_button">Login</string>
+    <string name="register_button2">REGISTER</string>
 </resources>
