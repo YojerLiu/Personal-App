@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.Cuckoo.MESSAGE";
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         Log.d(msg, "The onStart() event is running");
+        Toast.makeText(this, "On start!", Toast.LENGTH_LONG).show();
     }
 
     // Called when the activity has become visible.

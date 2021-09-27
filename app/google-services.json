@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "356643140192",
+    "project_id": "cuckoo-f2ebb",
+    "storage_bucket": "cuckoo-f2ebb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356643140192:android:7787e4eac556271b1e0905",
+        "android_client_info": {
+          "package_name": "com.example.cuckoo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356643140192-hmuk86mi2j36b94n3lg9p09r5a0im0vq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhu2xoBMPeYs_SQjNlLc7IMmvFZTVwxnE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "356643140192-hmuk86mi2j36b94n3lg9p09r5a0im0vq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
