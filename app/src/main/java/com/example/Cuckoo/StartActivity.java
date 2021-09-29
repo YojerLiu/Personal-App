@@ -66,15 +66,13 @@ public class StartActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void userRegister(View view)
-    {
+    public void userRegister(View view) {
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
         finish();
     }
 
-    public void userLogin(View view)
-    {
+    public void userLogin(View view) {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
