@@ -1,8 +1,5 @@
 package com.example.Cuckoo;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,15 +8,23 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.SetOptions;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,6 +57,36 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        FirebaseFirestore fireStore = FirebaseFirestore.getInstance();
+        Map<String, Object> city = new HashMap<>();
+        city.put("Name", "Guangzhou");
+        city.put("Province", "Guangdong");
+        city.put("Country", "China");
+
+        Map<String, Object> data = new HashMap<>();
+        data.put("Capital", "Beijing");
+        data.put("Continent", "Asia");
+
+        fireStore.collection("Cities").document("GZC").set(city).addOnCompleteListener(task -> {
+            if(task.isComplete())
+            {
+                Toast.makeText(MainActivity.this, "City added!", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        fireStore.collection("Cities").document("GZC").set(data, SetOptions.merge()).addOnCompleteListener(task -> {
+            if(task.isComplete())
+            {
+                Toast.makeText(MainActivity.this, "Data merged!", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        DocumentReference ref = fireStore.collection("Cities").document("GZC");
+        ref.update("Name", "Shenzhen");
+
+        ref.set(new Place("Tianhe", "10000", "China", "Cantonese",
+                new PersonalResume("Yojer", "yojerliu@gmail.com")), SetOptions.merge());
     }
 
     public void logout(View view) {

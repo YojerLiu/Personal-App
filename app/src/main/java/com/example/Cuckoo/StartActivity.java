@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class StartActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.Cuckoo.MESSAGE";
     String msg = "Cuckoo: ";
@@ -27,6 +30,11 @@ public class StartActivity extends AppCompatActivity {
         super.onStart();
         Log.d(msg, "The onStart() event is running");
         Toast.makeText(this, "On start!", Toast.LENGTH_LONG).show();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user != null)
+        {
+            startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)) ;
+        }
     }
 
     // Called when the activity has become visible.
