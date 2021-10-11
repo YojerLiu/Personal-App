@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -87,6 +88,15 @@ public class MainActivity extends AppCompatActivity {
 
         ref.set(new Place("Tianhe", "10000", "China", "Cantonese",
                 new PersonalResume("Yojer", "yojerliu@gmail.com")), SetOptions.merge());
+
+        RadioButton radioButton = findViewById(R.id.radioButton);
+        radioButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, FireStoreVerify.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void logout(View view) {
@@ -105,4 +115,10 @@ public class MainActivity extends AppCompatActivity {
             FirebaseDatabase.getInstance().getReference().child("Information").child("branch" + (i++)).setValue(new PersonalResume(text, email));
         }
     }
+
+    public void onTest(View view)
+    {
+        startActivity(new Intent(this, ChatActivity.class));
+    }
+
 }
